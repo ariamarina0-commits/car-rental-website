@@ -21,7 +21,7 @@ export const faqItems: FaqItem[] = [
     id: 3,
     question: "What payment methods are accepted?",
     answer:
-      "Action Rent a Car accepts credit cards, debit cards and cash where applicable. All reservations are subject to vehicle availability.",
+      "Caring Rent Car accepts credit cards, debit cards and cash where applicable. All reservations are subject to vehicle availability.",
   },
   {
     id: 4,
@@ -45,13 +45,13 @@ export const faqItems: FaqItem[] = [
     id: 7,
     question: "Is roadside assistance available?",
     answer:
-      "Yes. 24-hour roadside assistance is available throughout Crete. Customers should contact Action Rent a Car immediately if the vehicle develops a mechanical problem.",
+      "Yes. 24-hour roadside assistance is available throughout Crete. Customers should contact Caring Rent Car immediately if the vehicle develops a mechanical problem.",
   },
   {
     id: 8,
     question: "Can I take the rental car on a ferry?",
     answer:
-      "Vehicles are not permitted to leave Crete by ferry unless prior written approval has been obtained from Action Rent a Car.",
+      "Vehicles are not permitted to leave Crete by ferry unless prior written approval has been obtained from Caring Rent Car.",
   },
   {
     id: 9,

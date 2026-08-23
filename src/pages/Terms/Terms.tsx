@@ -11,7 +11,7 @@ function Terms() {
 
           <p>
             Please read the following terms carefully before confirming your
-            reservation with Action Rent a Car.
+            reservation with Caring Rent Car.
           </p>
         </header>
 
@@ -80,7 +80,7 @@ function Terms() {
               <p>All reservations are subject to vehicle availability.</p>
 
               <p>
-                Action Rent a Car reserves the right to provide a vehicle of
+                Caring Rent Car reserves the right to provide a vehicle of
                 the same or a higher category at no additional cost if the
                 reserved vehicle is unavailable.
               </p>
@@ -159,7 +159,7 @@ function Terms() {
               <h2>Premium Insurance</h2>
 
               <p>
-                Action Rent a Car aims to provide transparent pricing with no
+                Caring Rent Car aims to provide transparent pricing with no
                 hidden costs.
               </p>
 
@@ -195,12 +195,12 @@ function Terms() {
 
               <p>
                 If your vehicle develops a mechanical problem, please contact
-                Action Rent a Car immediately.
+                Caring Rent Car immediately.
               </p>
 
               <p>
                 Customers must not arrange repairs without prior approval from
-                Action Rent a Car.
+                Caring Rent Car.
               </p>
             </article>
 
@@ -210,7 +210,7 @@ function Terms() {
               <ol>
                 <li>Ensure everyone’s safety.</li>
                 <li>Contact the Police if required.</li>
-                <li>Contact Action Rent a Car immediately.</li>
+                <li>Contact Caring Rent Car immediately.</li>
                 <li>
                   Do not admit liability or sign any document without approval.
                 </li>
@@ -233,7 +233,7 @@ function Terms() {
 
               <p>
                 Any theft or attempted theft must be reported immediately to
-                both the Police and Action Rent a Car.
+                both the Police and Caring Rent Car.
               </p>
             </article>
 
@@ -256,7 +256,7 @@ function Terms() {
               <p>
                 Vehicles are not permitted to leave the island of Crete by
                 ferry unless prior written approval has been obtained from
-                Action Rent a Car.
+                Caring Rent Car.
               </p>
 
               <p>

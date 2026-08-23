@@ -22,7 +22,7 @@ function Contact() {
 
           <p>
             Have a question about your booking, vehicle or
-            pick-up? Get in touch with Action Rent a Car.
+            pick-up? Get in touch with Caring Rent Car.
           </p>
         </header>
 

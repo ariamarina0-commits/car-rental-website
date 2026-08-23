@@ -20,7 +20,7 @@ function About() {
           </h1>
 
           <p>
-            At Action Rent a Car, we focus on making car rental
+            At Caring Rent Car, we focus on making car rental
             simple, reliable and stress-free, so you can spend
             less time worrying about the details and more time
             enjoying Crete.

@@ -20,7 +20,7 @@ function Privacy() {
                     <h2>Policy pending</h2>
                     <p>This page is currently a development placeholder.
                         The final policy will be describe how personal data is collected
-                        processed and protected by Action Rent a car.
+                        processed and protected by Caring Rent Car.
                     </p>
                 </div>
             </div>

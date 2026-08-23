@@ -29,7 +29,7 @@ function Navbar() {
           <span className={styles.logoMark}>CR</span>
 
           <span className={styles.logoText}>
-            <strong>Action Rent a Car</strong>
+            <strong>Caring Rent Car</strong>
             <small>Explore Crete freely</small>
           </span>
         </NavLink>
