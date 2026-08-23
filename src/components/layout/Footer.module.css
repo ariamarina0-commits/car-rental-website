@@ -4,15 +4,14 @@
   margin-top: 0;
 
   padding:
-    var(--spacing-3xl)
+    calc(var(--spacing-2xl) + 0.5rem)
     0
     var(--spacing-xl);
 
   background:
     linear-gradient(
       180deg,
-      #0a3049 0%,
-      #07273b 35%,
+      #092f48 0%,
       #061f30 100%
     );
 
