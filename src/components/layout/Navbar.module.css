@@ -1,0 +1,267 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: rgb(255 255 255 / 92%);
+  border-bottom: 1px solid rgb(220 230 234 / 75%);
+  backdrop-filter: blur(14px);
+}
+
+.navbar {
+  position: relative;
+
+  display: flex;
+  min-height: 76px;
+
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-lg);
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+
+  flex-shrink: 0;
+}
+
+.logoMark {
+  display: grid;
+
+  width: 46px;
+  height: 46px;
+
+  place-items: center;
+
+  border-radius: var(--radius-md);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--color-primary-700),
+      var(--color-primary-500)
+    );
+
+  color: var(--color-surface);
+
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+
+  box-shadow: var(--shadow-sm);
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+
+  line-height: 1.15;
+}
+
+.logoText strong {
+  color: var(--color-primary-900);
+
+  font-size: 1rem;
+}
+
+.logoText small {
+  margin-top: 0.2rem;
+
+  color: var(--color-text-muted);
+
+  font-size: 0.73rem;
+}
+
+/* Mobile menu button */
+
+.menuButton {
+  display: flex;
+
+  width: 44px;
+  height: 44px;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  flex-shrink: 0;
+
+  border: 0;
+  border-radius: var(--radius-sm);
+
+  background: var(--color-primary-100);
+
+  cursor: pointer;
+}
+
+.menuButton span {
+  display: block;
+
+  width: 21px;
+  height: 2px;
+
+  border-radius: var(--radius-pill);
+
+  background: var(--color-primary-900);
+}
+
+/* Mobile navigation */
+
+.navigation {
+  position: absolute;
+
+  top: calc(100% + 0.5rem);
+  right: 0;
+  left: 0;
+
+  display: none;
+  flex-direction: column;
+
+  gap: 0.25rem;
+
+  padding: var(--spacing-md);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+
+  background: var(--color-surface);
+
+  box-shadow: var(--shadow-md);
+}
+
+.navigationOpen {
+  display: flex;
+}
+
+.navLink {
+  padding: 0.8rem 1rem;
+
+  border-radius: var(--radius-sm);
+
+  color: var(--color-text-muted);
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  transition:
+    color var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+.navLink:hover {
+  background: var(--color-primary-100);
+  color: var(--color-primary-700);
+}
+
+.active {
+  background: var(--color-primary-100);
+  color: var(--color-primary-700);
+}
+
+/* Booking CTA */
+
+.bookingButton {
+  display: inline-flex;
+
+  min-height: 48px;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.8rem 1.35rem;
+
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+
+  background: var(--color-primary-700);
+  color: var(--color-surface);
+
+  font-size: 0.92rem;
+  font-weight: 800;
+
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    background-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.bookingButton:hover {
+  background: var(--color-primary-900);
+
+  box-shadow: var(--shadow-md);
+
+  transform: translateY(-2px);
+}
+
+/* Desktop */
+
+@media (min-width: 768px) {
+  .navbar {
+    min-height: 84px;
+  }
+
+  .menuButton {
+    display: none;
+  }
+
+  .navigation {
+    position: static;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+
+    gap: var(--spacing-xs);
+
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    box-shadow: none;
+  }
+
+  .navLink {
+    position: relative;
+
+    padding: 0.7rem 0.85rem;
+
+    background: transparent;
+  }
+
+  .navLink:hover {
+    background: transparent;
+  }
+
+  .active {
+    background: transparent;
+    color: var(--color-primary-700);
+  }
+
+  .active::after {
+    content: "";
+
+    position: absolute;
+
+    right: 0.85rem;
+    bottom: 0.15rem;
+    left: 0.85rem;
+
+    height: 2px;
+
+    border-radius: var(--radius-pill);
+
+    background: var(--color-primary-500);
+  }
+
+  .bookingButton {
+    margin-left: var(--spacing-sm);
+  }
+}

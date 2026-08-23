@@ -1,0 +1,156 @@
+.section {
+  padding-block: var(--section-padding);
+  background: var(--color-primary-50);
+}
+
+.layout {
+  display: grid;
+  gap: var(--spacing-2xl);
+}
+
+.heading {
+  max-width: 620px;
+}
+
+.heading > span {
+  display: inline-block;
+
+  margin-bottom: var(--spacing-sm);
+
+  color: var(--color-primary-700);
+
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.heading h2 {
+  margin-bottom: var(--spacing-md);
+
+  font-size: clamp(2rem, 5vw, 3.25rem);
+}
+
+.heading p {
+  margin-bottom: 0;
+
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.list {
+  display: grid;
+  gap: var(--spacing-sm);
+}
+
+.item {
+  overflow: hidden;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+
+  background: var(--color-surface);
+
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.item:hover {
+  border-color: var(--color-primary-300);
+  box-shadow: var(--shadow-sm);
+}
+
+.question {
+  display: flex;
+
+  width: 100%;
+  min-height: 68px;
+
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-lg);
+
+  padding: 1rem 1.25rem;
+
+  background: transparent;
+
+  color: var(--color-primary-900);
+
+  font-weight: 700;
+  text-align: left;
+}
+
+.icon {
+  flex-shrink: 0;
+
+  color: var(--color-primary-500);
+
+  transition: transform var(--transition-normal);
+}
+
+.iconOpen {
+  transform: rotate(180deg);
+}
+
+.answer {
+  padding:
+    0
+    1.25rem
+    1.25rem;
+}
+
+.answer p {
+  margin: 0;
+
+  color: var(--color-text-muted);
+
+  line-height: 1.75;
+}
+
+@media (min-width: 960px) {
+  .layout {
+    grid-template-columns:
+      minmax(0, 0.8fr)
+      minmax(0, 1.2fr);
+
+    align-items: start;
+  }
+}
+
+.termsLinkWrapper {
+  margin-top: var(--spacing-xl);
+}
+
+.termsLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 46px;
+  padding: 0.75rem 1.25rem;
+
+  border: 1px solid var(--color-primary-300);
+  border-radius: var(--radius-pill);
+
+  background: var(--color-surface);
+
+  color: var(--color-primary-700);
+
+  font-size: 0.9rem;
+  font-weight: 800;
+
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.termsLink:hover {
+  border-color: var(--color-primary-700);
+  background: var(--color-primary-700);
+  color: var(--color-surface);
+
+  transform: translateY(-2px);
+}

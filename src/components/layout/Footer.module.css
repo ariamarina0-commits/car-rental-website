@@ -1,0 +1,161 @@
+.footer {
+  margin-top: auto;
+
+  background: var(--color-primary-950);
+  color: var(--color-surface);
+}
+
+.inner {
+  display: grid;
+  gap: var(--spacing-2xl);
+
+  padding-block: var(--spacing-3xl);
+}
+
+.brand {
+  max-width: 360px;
+}
+
+.logo {
+  display: inline-block;
+
+  margin-bottom: var(--spacing-md);
+
+  color: var(--color-surface);
+
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.brand p {
+  margin-bottom: 0;
+
+  color: rgb(255 255 255 / 65%);
+
+  line-height: 1.75;
+}
+
+.column h3 {
+  margin-bottom: var(--spacing-md);
+
+  color: var(--color-surface);
+
+  font-size: 0.95rem;
+}
+
+.column nav {
+  display: grid;
+  gap: var(--spacing-sm);
+}
+
+.column nav a {
+  width: fit-content;
+
+  color: rgb(255 255 255 / 65%);
+
+  font-size: 0.9rem;
+
+  transition:
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.column nav a:hover {
+  color: var(--color-primary-300);
+
+  transform: translateX(3px);
+}
+
+.contactList {
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+.contactList div {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+
+  color: rgb(255 255 255 / 65%);
+
+  font-size: 0.9rem;
+}
+
+.contactList svg {
+  flex-shrink: 0;
+
+  margin-top: 0.15rem;
+
+  color: var(--color-primary-300);
+}
+
+.bottom {
+  border-top: 1px solid rgb(255 255 255 / 10%);
+}
+
+.bottomInner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+
+  padding-block: var(--spacing-lg);
+}
+
+.bottomInner p {
+  margin: 0;
+
+  color: rgb(255 255 255 / 45%);
+
+  font-size: 0.8rem;
+}
+
+.legal {
+  display: flex;
+  gap: var(--spacing-lg);
+}
+
+.legal a {
+  color: rgb(255 255 255 / 55%);
+
+  font-size: 0.8rem;
+
+  transition: color var(--transition-fast);
+}
+
+.legal a:hover {
+  color: var(--color-primary-300);
+}
+
+@media (min-width: 720px) {
+  .inner {
+    grid-template-columns:
+      1.4fr
+      1fr
+      1fr;
+  }
+
+  .brand {
+    grid-column: 1 / -1;
+  }
+
+  .bottomInner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1050px) {
+  .inner {
+    grid-template-columns:
+      1.5fr
+      1fr
+      1fr
+      1.2fr;
+  }
+
+  .brand {
+    grid-column: auto;
+  }
+}

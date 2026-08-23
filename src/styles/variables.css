@@ -1,0 +1,71 @@
+:root {
+  /* Brand colors */
+  --color-primary-950: #071f31;
+  --color-primary-900: #0b2d45;
+  --color-primary-800: #0f405f;
+  --color-primary-700: #12577a;
+  --color-primary-500: #168aad;
+  --color-primary-300: #74c0d4;
+  --color-primary-100: #e5f5f9;
+  --color-primary-50: #f2fafc;
+
+  --color-accent: #e8b86d;
+  --color-accent-dark: #c98c3a;
+  --color-accent-soft: #f8eddc;
+
+  /* Neutral colors */
+  --color-background: #f8fafb;
+  --color-surface: #ffffff;
+  --color-surface-soft: #eef5f7;
+  --color-surface-muted: #f3f7f8;
+
+  --color-text: #15242e;
+  --color-text-strong: #0c1c26;
+  --color-text-muted: #667782;
+  --color-border: #dce6ea;
+  --color-border-strong: #c7d7dd;
+
+  --color-success: #2f855a;
+  --color-error: #c24141;
+
+  /* Layout */
+  --container-width: 1200px;
+  --container-padding: 1.25rem;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 0.75rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 5rem;
+  --spacing-4xl: 7rem;
+
+  /* Border radius */
+  --radius-sm: 0.65rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.35rem;
+  --radius-xl: 1.75rem;
+  --radius-pill: 999px;
+
+  /* Shadows */
+  --shadow-sm: 0 4px 14px rgb(11 45 69 / 8%);
+  --shadow-md: 0 12px 32px rgb(11 45 69 / 11%);
+  --shadow-lg: 0 22px 55px rgb(11 45 69 / 15%);
+
+  /* Transitions */
+  --transition-fast: 160ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 400ms ease;
+
+  /* Typography */
+  --font-body: "Inter", Arial, Helvetica, sans-serif;
+  --font-heading: "Manrope", Arial, Helvetica, sans-serif;
+
+  /* Section rhythm */
+  --section-padding: 6rem;
+
+  /* Buttons */
+  --button-height: 48px;
+}
