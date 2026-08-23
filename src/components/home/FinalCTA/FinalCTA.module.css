@@ -1,6 +1,19 @@
 .section {
-  padding-block: var(--section-padding);
-  background: var(--color-primary-900);
+  position: relative;
+
+  padding:
+    var(--section-padding)
+    0
+    calc(var(--section-padding) + 1rem);
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--color-primary-900) 0%,
+      #0a3049 100%
+    );
+
+  color: var(--color-surface);
 }
 
 .inner {

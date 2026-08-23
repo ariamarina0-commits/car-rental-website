@@ -1,8 +1,35 @@
 .footer {
-  margin-top: auto;
+  position: relative;
 
-  background: var(--color-primary-950);
+  margin-top: 0;
+
+  padding:
+    var(--spacing-3xl)
+    0
+    var(--spacing-xl);
+
+  background:
+    linear-gradient(
+      180deg,
+      #0a3049 0%,
+      #07273b 35%,
+      #061f30 100%
+    );
+
   color: var(--color-surface);
+}
+
+.footer::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  height: 1px;
+
+  background: rgb(255 255 255 / 8%);
 }
 
 .inner {
