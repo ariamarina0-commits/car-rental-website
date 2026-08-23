@@ -9,7 +9,7 @@ function Footer() {
       <div className={`container ${styles.inner}`}>
         <div className={styles.brand}>
           <Link to="/" className={styles.logo}>
-            Action Rent a Car
+            Caring Rent Car
           </Link>
 
           <p>
@@ -69,7 +69,7 @@ function Footer() {
       <div className={styles.bottom}>
         <div className={`container ${styles.bottomInner}`}>
           <p>
-            © {new Date().getFullYear()} Action Rent a Car.
+            © {new Date().getFullYear()} Caring Rent Car.
             All rights reserved.
           </p>
 
