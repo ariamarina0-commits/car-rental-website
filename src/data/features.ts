@@ -28,6 +28,6 @@ export const features = [
         id:4,
         icon:Headphones,
         title:"24/7 customer support",
-        description:"Helpful assiastance before, during and after your rental. ",
+        description:"Helpful assistance before, during and after your rental. ",
     }
 ]
