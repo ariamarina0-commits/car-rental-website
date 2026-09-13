@@ -1,10 +1,60 @@
-import { CalendarDays, CarFront, Search } from "lucide-react";
-import { Link } from "react-router-dom";
+import { useEffect, useState, type FormEvent } from "react";
+import {
+  CalendarDays,
+  CarFront,
+  Search,
+} from "lucide-react";
+import {
+  Link,
+  useNavigate,
+} from "react-router-dom";
+
+import { bookingService } from "../../booking/bookingService";
+import type { Location as RentalLocation } from "../../booking/models/Location";
 
 import heroImage from "./../../assets/images/hero-image.png";
 import styles from "./Hero.module.css";
 
 function Hero() {
+  const navigate = useNavigate();
+
+  const [locations, setLocations] = useState<RentalLocation[]>([]);
+
+  const [pickupLocationId, setPickupLocationId] = useState("");
+  const [dropoffLocationId, setDropoffLocationId] = useState("");
+
+  const [pickupDate, setPickupDate] = useState("");
+  const [pickupTime, setPickupTime] = useState("10:00");
+
+  const [dropoffDate, setDropoffDate] = useState("");
+  const [dropoffTime, setDropoffTime] = useState("10:00");
+
+  useEffect(() => {
+    bookingService
+      .getLocations()
+      .then(setLocations)
+      .catch((error) => {
+        console.error("Failed to load locations:", error);
+      });
+  }, []);
+
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    const search = {
+      pickupLocationId,
+      dropoffLocationId,
+      pickupDateTime: `${pickupDate}T${pickupTime}`,
+      dropoffDateTime: `${dropoffDate}T${dropoffTime}`,
+    };
+
+    navigate("/booking", {
+      state: {
+        search,
+      },
+    });
+  }
+
   return (
     <section
       className={styles.hero}
@@ -52,28 +102,63 @@ function Hero() {
         id="booking"
         className={`container ${styles.bookingWrapper}`}
       >
-        <form className={styles.bookingCard}>
+        <form
+          className={styles.bookingCard}
+          onSubmit={handleSubmit}
+        >
           <div className={styles.field}>
             <label htmlFor="pickup-location">
               Pick-up Location
             </label>
 
-            <select id="pickup-location" defaultValue="">
+            <select
+              id="pickup-location"
+              value={pickupLocationId}
+              onChange={(event) =>
+                setPickupLocationId(event.target.value)
+              }
+              required
+            >
               <option value="" disabled>
                 Select a location
               </option>
 
-              <option value="heraklion-airport">
-                Heraklion Airport
+              {locations.map((location) => (
+                <option
+                  key={location.id}
+                  value={location.id}
+                >
+                  {location.name}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div className={styles.field}>
+            <label htmlFor="dropoff-location">
+              Drop-off Location
+            </label>
+
+            <select
+              id="dropoff-location"
+              value={dropoffLocationId}
+              onChange={(event) =>
+                setDropoffLocationId(event.target.value)
+              }
+              required
+            >
+              <option value="" disabled>
+                Select a location
               </option>
 
-              <option value="heraklion-port">
-                Heraklion Port
-              </option>
-
-              <option value="heraklion-city">
-                Heraklion City
-              </option>
+              {locations.map((location) => (
+                <option
+                  key={location.id}
+                  value={location.id}
+                >
+                  {location.name}
+                </option>
+              ))}
             </select>
           </div>
 
@@ -85,17 +170,59 @@ function Hero() {
             <input
               type="date"
               id="pickup-date"
+              value={pickupDate}
+              onChange={(event) =>
+                setPickupDate(event.target.value)
+              }
+              required
             />
           </div>
 
           <div className={styles.field}>
-            <label htmlFor="return-date">
-              Return Date
+            <label htmlFor="pickup-time">
+              Pick-up Time
+            </label>
+
+            <input
+              type="time"
+              id="pickup-time"
+              value={pickupTime}
+              onChange={(event) =>
+                setPickupTime(event.target.value)
+              }
+              required
+            />
+          </div>
+
+          <div className={styles.field}>
+            <label htmlFor="dropoff-date">
+              Drop-off Date
             </label>
 
             <input
               type="date"
-              id="return-date"
+              id="dropoff-date"
+              value={dropoffDate}
+              onChange={(event) =>
+                setDropoffDate(event.target.value)
+              }
+              required
+            />
+          </div>
+
+          <div className={styles.field}>
+            <label htmlFor="dropoff-time">
+              Drop-off Time
+            </label>
+
+            <input
+              type="time"
+              id="dropoff-time"
+              value={dropoffTime}
+              onChange={(event) =>
+                setDropoffTime(event.target.value)
+              }
+              required
             />
           </div>
 

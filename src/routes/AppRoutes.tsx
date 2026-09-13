@@ -11,6 +11,7 @@ import Booking from "../pages/Booking";
 import NotFound from "../pages/NotFound";
 import CarDetails from "../pages/CarDetails";
 import Privacy from "../pages/Privacy";
+import BookingDetails from "../pages/Booking/BookingDetails";
 
 function AppRoutes() {
   return (
@@ -25,6 +26,7 @@ function AppRoutes() {
         <Route path="*" element={<NotFound />} />
         <Route path="/fleet/:id" element={<CarDetails/>}/>
         <Route path="/privacy" element={<Privacy />} />
+        <Route path="/booking/details" element={<BookingDetails />} />
       </Route>
     </Routes>
   );
